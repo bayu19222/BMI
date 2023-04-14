@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="program.js" defer></script>
+</head>
+<body>
+  <form class="form-signin">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">Check your BMI</h1>
+      <p>Enter your weight and height below to check your BMI result</p>
+    </div>
+
+    <div class="form-group1">
+      <label>Put your weight in here (KG)
+        <input type="text" class="form-control" id="ipt_b" />
+      </label>
+    </div>
+
+    <div class="form-group2">
+      <label>
+        And your height in here (CM)
+        <input type="text" class="form-control" id="ipt_t" />
+      </label>
+    </div>
+
+    <div class="left">
+    <button
+      type="button"
+      class="btn btn-lg btn-primary btn-block"
+      onclick="calculate()">
+      Calculate BMI
+    </button>
+    </div>
+    <p></p>
+    <div>
+      <table>
+        <tfoot>
+          <tr>
+            <td id="bmi">Your BMI is :</td>
+          </tr>
+          <tr>
+            <td>which means You are :</td>
+          </tr>
+          <tr>
+            <td id="keterangan"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </form>
+
+  <script type="text/javascript" src="programBMI.js"></script>
+  <script src="script/install.js"></script>
+  <script>
+    // CODELAB: Register service worker.
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js").then(reg => {
+          console.log("Service worker registered.", reg);
+        });
+      });
+    }
+  </script>   
+</body>
+</html>
